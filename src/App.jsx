@@ -1,13 +1,11 @@
-
+import NabBar from './components/NabBar';
 
 function App() {
 
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
-    </>
+    <div className='!bg-white !dark:bg-gray-900 !dark:text-white'>
+      <NabBar />
+    </div>
   )
 }
 
