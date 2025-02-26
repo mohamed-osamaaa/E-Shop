@@ -1,59 +1,63 @@
 import { useState } from 'react';
 
 import {
-    Search,
-    ShoppingCart,
+  Search,
+  ShoppingCart,
 } from 'lucide-react';
+
+import darkModeButton from '../assets/website/dark-mode-button.png';
+import lightModeButton from '../assets/website/light-mode-button.png';
 
 function NabBar() {
     const [open, setOpen] = useState(false);
     const [dark, setDark] = useState(false);
 
     return (
-        <div className="grid grid-cols-2 gap-14">
+        <div className="bg-white grid justify-center grid-cols-2 gap-14 mt-7 mb-7 ml-10 mr-10">
             <div>
-                <ul className='flex justify-center items-center space-x-4'>
+                <ul className='flex items-center space-x-14 '>
                     <li>
-                        ESHOP
+                        <a href='#' className='font-bold text-3xl text-red-500 tracking-[0.2em]'>ESHOP</a>
                     </li>
                     <li>
-                        <a href="#home">Home</a>
+                        <a href="#home" className='text-gray-600 hover:text-black text-lg'>Home</a>
                     </li>
                     <li>
-                        <a href="#Shop">Shop</a>
+                        <a href="#Shop" className='text-gray-600 hover:text-black text-lg'>Shop</a>
                     </li>
                     <li>
-                        <a href="#About">About</a>
+                        <a href="#About" className='text-gray-600 hover:text-black text-lg'>About</a>
                     </li>
                     <li>
-                        <a href="#Blogs">Blogs</a>
+                        <a href="#Blogs" className='text-gray-600 hover:text-black text-lg'>Blogs</a>
                     </li>
 
                     <li
                         onMouseEnter={() => setOpen(true)}
                         onMouseLeave={() => setOpen(false)}
+                        className='relative text-gray-600'
                     >
                         <button>
-                            Quick Links
+                            <span className='mr-2'>Quick Links</span>
                             <span
-                                className={`transform transition-transform ${open ? "rotate-180" : "rotate-0"
+                                className={`inline-block text-xs transform transition-transform ${open ? "rotate-180" : "rotate-0"
                                     }`}
                             >
                                 ▼
                             </span>
                         </button>
                         {open && (
-                            <ul>
+                            <ul className='absolute flex flex-col items-start pt-5 h-40 pl-2.5 w-48 bg-gray-100 space-y-4'>
                                 <li>
-                                    <a href="#TrendingProducts">
+                                    <a href="#TrendingProducts" className='text-gray-600 hover:bg-red-400 rounded-sm p-2'>
                                         Trending Products
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#BestSelling">Best Selling</a>
+                                    <a href="#BestSelling" className='text-gray-600 hover:bg-red-400 rounded-sm p-2'>Best Selling</a>
                                 </li>
                                 <li>
-                                    <a href="#TopRated">Top Rated</a>
+                                    <a href="#TopRated" className='text-gray-600 hover:bg-red-400 rounded-sm p-2'>Top Rated</a>
                                 </li>
                             </ul>
                         )}
@@ -67,10 +71,11 @@ function NabBar() {
                 </div>
                 <div onClick={() => setDark((prev) => !prev)}>
                     <img
+                        className='h-6 w-14'
                         src={
                             dark
-                                ? "../assets/website/dark-mode-button.png"
-                                : "../assets/website/light-mode-button.png"
+                                ? darkModeButton
+                                : lightModeButton
                         }
                         alt={dark ? "Dark" : "Light"}
                     />
