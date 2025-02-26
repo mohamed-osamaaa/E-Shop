@@ -74,7 +74,7 @@ function NabBar() {
                             </span>
                         </button>
                         {open && (
-                            <ul className="absolute flex flex-col items-start pt-5 h-40 pl-2.5 w-48 bg-gray-100 space-y-4">
+                            <ul className="absolute flex flex-col items-start pt-5 h-40 pl-2.5 w-48 bg-gray-100 space-y-4 z-10">
                                 <li>
                                     <a
                                         href="#TrendingProducts"
@@ -112,7 +112,7 @@ function NabBar() {
                     {showSearch ? (
                         <SearchField />
                     ) : (
-                        <Search className="pl-1.5 cursor-pointer" />
+                        <Search className="pl-1.5" />
                     )}
                 </div>
                 <div>
