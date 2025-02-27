@@ -1,18 +1,21 @@
 import { useState } from 'react';
 
 import {
-  Search,
-  ShoppingCart,
+    Search,
+    ShoppingCart,
 } from 'lucide-react';
 
 import darkModeButton from '../assets/website/dark-mode-button.png';
 import lightModeButton from '../assets/website/light-mode-button.png';
+import OrderNow from './OrderNow';
 import SearchField from './Search';
 
 function NabBar() {
     const [open, setOpen] = useState(false);
     const [dark, setDark] = useState(false);
     const [showSearch, setShowSearch] = useState(false);
+    const [showOrder, setShowOrder] = useState(false);
+
 
     return (
         <div className="bg-white grid justify-center grid-cols-2 gap-14 mt-7 mb-7 ml-10 mr-10">
@@ -115,9 +118,16 @@ function NabBar() {
                         <Search className="pl-1.5" />
                     )}
                 </div>
-                <div>
+                <div
+                    onClick={() => setShowOrder(true)}
+                    className="relative cursor-pointer"
+                >
+                    <div className="absolute -right-2 top-2 transform -translate-y-5 h-4 w-4 text-sm text-white rounded-lg flex items-center justify-center pb-1.5 pt-1 bg-red-400">
+                        4
+                    </div>
                     <ShoppingCart className="ml-8" />
                 </div>
+                {showOrder && <OrderNow onClose={() => setShowOrder(false)} />}
                 <div
                     onClick={() => setDark((prev) => !prev)}
                     className="ml-7 cursor-pointer"
