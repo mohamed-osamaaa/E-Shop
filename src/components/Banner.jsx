@@ -27,7 +27,7 @@ function Banner() {
     };
 
     return (
-        <div>
+        <div className='z-20'>
             <Swiper
                 modules={[Pagination, Autoplay]}
                 spaceBetween={50}
@@ -61,7 +61,7 @@ function Banner() {
                         </div>
                         <div>
                             <img
-                                className="z-40 h-[520px]"
+                                className="z-20 h-[520px]"
                                 src={headPhoneImage}
                                 alt="headPhoneImage"
                             />
@@ -89,7 +89,7 @@ function Banner() {
                         </div>
                         <div>
                             <img
-                                className="z-40 h-[420px]"
+                                className="z-20 h-[420px]"
                                 src={virtualImage}
                                 alt="virtualImage"
                             />
@@ -117,7 +117,7 @@ function Banner() {
                         </div>
                         <div>
                             <img
-                                className="z-40 w-[520px]"
+                                className="z-20 w-[520px]"
                                 src={laptopImage}
                                 alt="laptopImage"
                             />
