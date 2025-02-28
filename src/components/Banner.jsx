@@ -3,7 +3,10 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import './Banner.css';
 
-import { useState } from 'react';
+import {
+    useRef,
+    useState,
+} from 'react';
 
 import {
     Autoplay,
@@ -17,28 +20,48 @@ import {
 import laptopImage from '../assets/category/macbook.png';
 import virtualImage from '../assets/category/vr.png';
 import headPhoneImage from '../assets/hero/headphone.png';
+import OrderNow from './OrderNow';
 
 function Banner() {
     const [clicked, setClicked] = useState(false);
+    const [showOrder, setShowOrder] = useState(false);
+    const swiperRef = useRef(null);
 
     const handleClick = () => {
         setClicked(true);
         setTimeout(() => setClicked(false), 150);
+
+        // Pause autoplay when modal opens
+        if (swiperRef.current) {
+            swiperRef.current.swiper.autoplay.stop();
+        }
+
+        setShowOrder(true);
+    };
+
+    const handleCloseOrder = () => {
+        setShowOrder(false);
+
+        // Resume autoplay when modal closes
+        if (swiperRef.current) {
+            swiperRef.current.swiper.autoplay.start();
+        }
     };
 
     return (
-        <div className='z-20'>
+        <div className="z-20">
             <Swiper
+                ref={swiperRef}
                 modules={[Pagination, Autoplay]}
                 spaceBetween={50}
                 slidesPerView={1}
                 pagination={{
                     clickable: true,
-                    bulletActiveClass: "swiper-pagination-bullet-active"
+                    bulletActiveClass: "swiper-pagination-bullet-active",
                 }}
                 autoplay={{ delay: 3000 }}
                 loop
-                className="rounded-lg shadow-lg"
+                className="rounded-lg"
             >
                 <SwiperSlide>
                     <div className="bg-gray-300 h-[615px] rounded-4xl pl-15 mt-7 mb-7 ml-10 mr-10 grid grid-cols-1 md:grid-cols-2 items-center">
@@ -58,6 +81,9 @@ function Banner() {
                             >
                                 Shop By Category
                             </button>
+                            {showOrder && (
+                                <OrderNow onClose={handleCloseOrder} />
+                            )}
                         </div>
                         <div>
                             <img
@@ -86,6 +112,9 @@ function Banner() {
                             >
                                 Shop By Category
                             </button>
+                            {showOrder && (
+                                <OrderNow onClose={handleCloseOrder} />
+                            )}
                         </div>
                         <div>
                             <img
@@ -114,6 +143,9 @@ function Banner() {
                             >
                                 Shop By Category
                             </button>
+                            {showOrder && (
+                                <OrderNow onClose={handleCloseOrder} />
+                            )}
                         </div>
                         <div>
                             <img
