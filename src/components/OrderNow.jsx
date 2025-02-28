@@ -11,7 +11,7 @@ function OrderNow({ onClose }) {
     };
 
     return (
-        <div className="z-50 fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-50">
+        <div className="z-50 fixed top-0 left-0 w-full h-full flex justify-center items-center">
             <div className="bg-white p-6 rounded-lg shadow-lg w-96">
                 <div className="flex justify-between items-center">
                     <h1 className="text-lg font-bold">Order Now</h1>
