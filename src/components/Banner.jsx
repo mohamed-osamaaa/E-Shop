@@ -21,11 +21,14 @@ import laptopImage from '../assets/category/macbook.png';
 import virtualImage from '../assets/category/vr.png';
 import headPhoneImage from '../assets/hero/headphone.png';
 import OrderNow from './OrderNow';
+import useScrollReveal from './useScrollReveal';
 
 function Banner() {
     const [clicked, setClicked] = useState(false);
     const [showOrder, setShowOrder] = useState(false);
     const swiperRef = useRef(null);
+
+    useScrollReveal('.anim');
 
     const handleClick = () => {
         setClicked(true);
@@ -65,7 +68,7 @@ function Banner() {
             >
                 <SwiperSlide>
                     <div className="bg-gray-300 h-[615px] rounded-4xl pl-15 mt-7 mb-7 ml-10 mr-10 grid grid-cols-1 md:grid-cols-2 items-center">
-                        <div className="row-span-2">
+                        <div className="row-span-2 anim">
                             <p className="mb-4 text-2xl font-bold">
                                 Beats Solo
                             </p>
@@ -85,7 +88,7 @@ function Banner() {
                                 <OrderNow onClose={handleCloseOrder} />
                             )}
                         </div>
-                        <div>
+                        <div className='anim'>
                             <img
                                 className="z-20 h-[520px]"
                                 src={headPhoneImage}

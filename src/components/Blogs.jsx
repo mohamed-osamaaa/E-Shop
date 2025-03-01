@@ -1,6 +1,7 @@
 import img1 from '../assets/blogs/blog-1.jpg';
 import img2 from '../assets/blogs/blog-2.jpg';
 import img3 from '../assets/blogs/blog-3.jpg';
+import useScrollReveal from './useScrollReveal';
 
 const blogs = [
     { id: 1, image: img1, date: 'Jan 20, 2024 by Dilshad', header: 'How to choose perfect smartwatch', paragraph: 'minima facere deserunt vero illo beatae deleniti eius dolores consequuntur, eligendi corporis maiores molestiae laudantium. Porro?' },
@@ -9,6 +10,7 @@ const blogs = [
 ];
 
 function Blogs() {
+    useScrollReveal('.anim');
     return (
         <div className="mt-7 mb-25 ml-10 mr-10">
             <h1 className="text-4xl font-bold text-center pb-2">Recent News</h1>
@@ -16,7 +18,7 @@ function Blogs() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-10">
                 {blogs.map((blog) => (
-                    <div key={blog.id} className="pb-5 overflow-hidden">
+                    <div key={blog.id} className="pb-5 overflow-hidden anim">
                         <div className="relative overflow-hidden rounded-2xl">
                             <img
                                 src={blog.image}

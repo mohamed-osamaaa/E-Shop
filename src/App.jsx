@@ -4,6 +4,7 @@ import Banner3 from './components/Banner3';
 import Banner4 from './components/Banner4';
 import Blogs from './components/Blogs';
 import Brands from './components/Brands';
+import Footer from './components/Footer';
 import NabBar from './components/NabBar';
 import Products from './components/Products';
 import Service from './components/Service';
@@ -21,6 +22,7 @@ function App() {
       <Banner4 />
       <Blogs />
       <Brands />
+      <Footer />
     </div>
   )
 }
