@@ -3,6 +3,7 @@ import Banner2 from './components/Banner2';
 import Banner3 from './components/Banner3';
 import Banner4 from './components/Banner4';
 import Blogs from './components/Blogs';
+import Brands from './components/Brands';
 import NabBar from './components/NabBar';
 import Products from './components/Products';
 import Service from './components/Service';
@@ -19,6 +20,7 @@ function App() {
       <Products />
       <Banner4 />
       <Blogs />
+      <Brands />
     </div>
   )
 }
