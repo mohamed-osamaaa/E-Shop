@@ -7,6 +7,7 @@ import p4 from '../assets/product/p-4.jpg';
 import p5 from '../assets/product/p-5.jpg';
 import p7 from '../assets/product/p-7.jpg';
 import p9 from '../assets/product/p-9.jpg';
+import useScrollReveal from './useScrollReveal';
 
 const products = [
     { id: 1, name: 'Boat Headphone', price: 120, image: p1 },
@@ -20,6 +21,7 @@ const products = [
 ];
 
 function Products() {
+    useScrollReveal('.anim');
     const [clickedButtons, setClickedButtons] = useState({});
 
     const handleClick = (id) => {
@@ -36,7 +38,7 @@ function Products() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-18">
                 {products.map((product) => (
-                    <div key={product.id} className="pb-5">
+                    <div key={product.id} className="pb-5 anim">
                         <div className="relative group w-[300px] h-[200px]">
                             <img
                                 src={product.image}
