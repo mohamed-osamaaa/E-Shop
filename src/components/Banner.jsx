@@ -53,6 +53,20 @@ function Banner() {
 
     return (
         <div className="z-20">
+            {/* <Swiper
+                ref={swiperRef}
+                modules={[Pagination, Autoplay]}
+                spaceBetween={50}
+                slidesPerView={1}
+                pagination={{
+                    clickable: true,
+                    bulletClass: "dark:swiper-pagination-bullet",
+                    bulletActiveClass: "swiper-pagination-bullet-active",
+                }}
+                autoplay={{ delay: 3000 }}
+                loop
+                className="rounded-lg"
+            > */}
             <Swiper
                 ref={swiperRef}
                 modules={[Pagination, Autoplay]}
@@ -60,14 +74,16 @@ function Banner() {
                 slidesPerView={1}
                 pagination={{
                     clickable: true,
-                    bulletActiveClass: "swiper-pagination-bullet-active",
+                    renderBullet: (index, className) =>
+                        `<span class="${className} custom-bullet"></span>`,
                 }}
                 autoplay={{ delay: 3000 }}
                 loop
                 className="rounded-lg"
             >
+
                 <SwiperSlide>
-                    <div className="bg-gray-300 h-[615px] rounded-4xl pl-15 mt-7 mb-7 ml-10 mr-10 grid grid-cols-1 md:grid-cols-2 items-center">
+                    <div className="bg-gray-300 dark:bg-gray-800 h-[615px] rounded-4xl pl-15 mt-7 mb-7 ml-10 mr-10 grid grid-cols-1 md:grid-cols-2 items-center">
                         <div className="row-span-2 anim">
                             <p className="mb-4 text-2xl font-bold">
                                 Beats Solo
@@ -98,7 +114,7 @@ function Banner() {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="bg-gray-300 h-[615px] rounded-4xl pl-15 mt-7 mb-7 ml-10 mr-10 grid grid-cols-1 md:grid-cols-2 items-center">
+                    <div className="bg-gray-300 dark:bg-gray-800 h-[615px] rounded-4xl pl-15 mt-7 mb-7 ml-10 mr-10 grid grid-cols-1 md:grid-cols-2 items-center">
                         <div className="row-span-2">
                             <p className="mb-4 text-2xl font-bold">
                                 Beats Solo
@@ -129,7 +145,7 @@ function Banner() {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="bg-gray-300 h-[615px] rounded-4xl pl-15 mt-7 mb-7 ml-10 mr-10 grid grid-cols-1 md:grid-cols-2 items-center">
+                    <div className="bg-gray-300 dark:bg-gray-800 h-[615px] rounded-4xl pl-15 mt-7 mb-7 ml-10 mr-10 grid grid-cols-1 md:grid-cols-2 items-center">
                         <div className="row-span-2">
                             <p className="mb-4 text-2xl font-bold">
                                 Beats Solo

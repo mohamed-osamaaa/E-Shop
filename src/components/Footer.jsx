@@ -8,7 +8,7 @@ import {
 
 function Footer() {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 justify-items-center mb-30">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 justify-items-center pb-30 dark:bg-black pt-20">
             <div className="flex flex-col items-start">
                 <h1 className="pb-3.5 font-bold text-3xl text-red-500 tracking-[0.2em]">ESHOP</h1>
                 <p className="pb-0.5 text-gray-700">Lorem ipsum dolor sit, amet consectetur</p>
