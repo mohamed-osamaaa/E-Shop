@@ -12,7 +12,7 @@ import Service from './components/Service';
 function App() {
 
   return (
-    <div className='!bg-white !dark:bg-gray-900 !dark:text-white'>
+    <div className='bg-white dark:bg-gray-900 dark:text-white'>
       <NabBar />
       <Banner />
       <Banner2 />
