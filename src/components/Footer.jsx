@@ -18,17 +18,17 @@ function Footer() {
             </div>
             <div className="flex flex-col items-start">
                 <h1 className="text-xl font-bold pb-3">Important Links</h1>
-                <a className="text-gray-500 pb-3" href="#home">Home</a>
-                <a className="text-gray-500 pb-3" href="#about">About</a>
-                <a className="text-gray-500 pb-3" href="#contact">Contact</a>
-                <a className="text-gray-500 pb-3" href="#blog">Blog</a>
+                <a className="text-gray-500 hover:text-black dark:hover:text-white pb-3" href="#home">Home</a>
+                <a className="text-gray-500 hover:text-black dark:hover:text-white pb-3" href="#about">About</a>
+                <a className="text-gray-500 hover:text-black dark:hover:text-white pb-3" href="#contact">Contact</a>
+                <a className="text-gray-500 hover:text-black dark:hover:text-white pb-3" href="#blog">Blog</a>
             </div>
             <div className="flex flex-col items-start">
                 <h1 className="text-xl font-bold pb-3">Quick Links</h1>
-                <a className="text-gray-500 pb-3" href="#home">Home</a>
-                <a className="text-gray-500 pb-3" href="#about">About</a>
-                <a className="text-gray-500 pb-3" href="#contact">Contact</a>
-                <a className="text-gray-500 pb-3" href="#blog">Blog</a>
+                <a className="text-gray-500 hover:text-black dark:hover:text-white pb-3" href="#home">Home</a>
+                <a className="text-gray-500 hover:text-black dark:hover:text-white pb-3" href="#about">About</a>
+                <a className="text-gray-500 hover:text-black dark:hover:text-white pb-3" href="#contact">Contact</a>
+                <a className="text-gray-500 hover:text-black dark:hover:text-white pb-3" href="#blog">Blog</a>
             </div>
             <div className="flex flex-col items-start">
                 <h1 className="text-xl font-bold pb-5">Address</h1>
