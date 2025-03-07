@@ -97,7 +97,7 @@ function Banner2() {
                             </h1>
                             <button
                                 type="button"
-                                onClick={() => handleClick("virtual")}
+                                onClick={() => handleClick("PlayStation")}
                                 className={`mt-3 px-4 py-2 bg-red-500 text-white p-2 rounded-3xl cursor-pointer transform transition-transform duration-150 ${clickedButtons["laptop"] ? "scale-90" : "scale-100"
                                     }`}
                             >
