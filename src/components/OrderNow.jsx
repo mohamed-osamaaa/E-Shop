@@ -17,7 +17,7 @@ function OrderNow({ onClose }) {
                     <h1 className="text-lg font-bold">Order Now</h1>
                     <X className="cursor-pointer" onClick={onClose} />
                 </div>
-                <form className="flex flex-col space-y-4 mt-4">
+                <form className="flex flex-col space-y-4 sm:space-x-3 mt-4">
                     <input type="text" placeholder="Name" className="w-full border p-2 rounded" />
                     <input type="email" placeholder="Email" className="w-full border p-2 rounded" />
                     <input type="text" placeholder="Address" className="w-full border p-2 rounded" />
