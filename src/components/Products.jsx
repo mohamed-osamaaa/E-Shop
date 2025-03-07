@@ -32,29 +32,29 @@ function Products() {
     };
 
     return (
-        <div className="mt-7 mb-25 ml-10 mr-10">
-            <h1 className="text-4xl font-bold text-center pb-2">Our Products</h1>
-            <p className="text-center text-sm text-gray-400 pb-5">Explore Our Products</p>
+        <div className="mt-7 mb-16 px-4 sm:px-6 lg:px-10">
+            <h1 className="text-3xl sm:text-4xl font-bold text-center pb-2">Our Products</h1>
+            <p className="text-center text-sm text-gray-500 pb-5">Explore Our Products</p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-18">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                 {products.map((product) => (
                     <div key={product.id} className="pb-5 anim">
-                        <div className="relative group w-[300px] h-[200px]">
+                        <div className="relative group w-full h-[250px] sm:h-[300px]">
                             <img
                                 src={product.image}
                                 alt={product.name}
-                                className="bg-gray-400 rounded-lg w-full h-full object-cover group-hover:blur-sm"
+                                className="bg-gray-400 rounded-lg w-full h-full object-cover group-hover:blur-sm transition-all"
                             />
                             <button
-                                type="submit"
+                                type="button"
                                 onClick={() => handleClick(product.id)}
                                 className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer z-10 flex items-center justify-center bg-red-500 text-white px-4 py-2 opacity-0 rounded-2xl group-hover:opacity-100 transform transition-transform duration-150 ${clickedButtons[product.id] ? "scale-90" : "scale-100"}`}
                             >
                                 Add to cart
                             </button>
                         </div>
-                        <p className="font-bold text-xl pt-2 pb-1.5 text-start">{product.name}</p>
-                        <p className="font-bold text-xl text-start">${product.price}</p>
+                        <p className="font-bold text-lg sm:text-xl pt-2 pb-1.5 text-start">{product.name}</p>
+                        <p className="font-bold text-lg sm:text-xl text-start">${product.price}</p>
                     </div>
                 ))}
             </div>

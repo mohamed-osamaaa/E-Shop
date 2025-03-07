@@ -7,13 +7,17 @@ import useScrollReveal from './useScrollReveal';
 
 function Brands() {
     useScrollReveal('.anim');
+
     return (
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 bg-gray-200 dark:bg-gray-700 w-full h-32 items-center justify-items-center">
-            <img className="h-10 w-20 opacity-50 anim dark:filter dark:invert" src={br1} alt="br1" />
-            <img className="h-10 w-20 opacity-50 anim dark:filter dark:invert" src={br2} alt="br2" />
-            <img className="h-10 w-20 opacity-50 anim dark:filter dark:invert" src={br3} alt="br3" />
-            <img className="h-10 w-20 opacity-50 anim dark:filter dark:invert" src={br4} alt="br4" />
-            <img className="h-10 w-20 opacity-50 anim dark:filter dark:invert" src={br5} alt="br5" />
+        <div className="w-full bg-gray-200 dark:bg-gray-700 py-6 px-4 flex flex-wrap justify-center items-center gap-6 lg:gap-20">
+            {[br1, br2, br3, br4, br5].map((brand, index) => (
+                <img
+                    key={index}
+                    className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto opacity-50 anim dark:filter dark:invert"
+                    src={brand}
+                    alt={`brand-${index + 1}`}
+                />
+            ))}
         </div>
     );
 }
