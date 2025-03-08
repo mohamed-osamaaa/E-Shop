@@ -2,7 +2,7 @@
 
 
 ## 🚀 Live Demo
-🔗 [E-Shop Deployment](https://eshopv1.netlify.app/)
+🔗 [E-Shop Deployment](https://e-shopv2.netlify.app/)
 
 ## 📌 Description
 E-Shop is a modern e-commerce web application built with Vite, React, and Tailwind CSS. It features a smooth and engaging user experience, with animations powered by Scroll Reveal and Swiper for interactive sliders. The project uses React Lucide for icons and is fully responsive with dark mode support.
