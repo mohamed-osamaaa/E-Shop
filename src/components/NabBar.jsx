@@ -34,7 +34,7 @@ function NabBar() {
     }, [dark]);
 
     return (
-        <div className="bg-white dark:bg-gray-900 dark:text-white grid justify-center grid-cols-2 gap-14 pt-7 mb-7 pl-10 pr-10">
+        <div className="bg-white dark:bg-gray-900 dark:text-white grid justify-center grid-cols-2 sm:gap-3 md:gap-14 pt-7 mb-7 pl-10 pr-10">
             <div className='relative flex lg:justify-center lg:items-center space-x-14'>
                 <a href="#" className="font-bold lg:text-3xl md:text-3xl text-3xl text-red-500 tracking-[0.2em] sm:text-xl">ESHOP</a>
                 <ul className="hidden lg:flex sm:items-center sm:space-x-10 md:items-center md:space-x-10">
@@ -76,11 +76,11 @@ function NabBar() {
                     <div className="absolute -right-2 top-2 transform -translate-y-5 h-4 w-4 text-sm text-white rounded-lg flex items-center justify-center pb-1.5 pt-1 bg-red-400">
                         4
                     </div>
-                    <ShoppingCart className="ml-8 dark:text-gray-600" />
+                    <ShoppingCart className="sm:ml-4 md:ml-8 dark:text-gray-600" />
                 </div>
                 {showOrder && <OrderNow className="sm:w-3/4" onClose={() => setShowOrder(false)} />}
                 <div onClick={() => setDark(prev => !prev)} className="ml-7 cursor-pointer">
-                    <img className="h-6 w-14 sm:" src={dark ? darkModeButton : lightModeButton} alt={dark ? "Dark" : "Light"} />
+                    <img className="h-6 w-14" src={dark ? darkModeButton : lightModeButton} alt={dark ? "Dark" : "Light"} />
                 </div>
                 <button onClick={() => setMenuOpen(true)} className="inline-block ml-5 lg:hidden text-gray-600 dark:text-white">
                     <Menu size={30} />

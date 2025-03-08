@@ -97,8 +97,8 @@ function Banner2() {
                             </h1>
                             <button
                                 type="button"
-                                onClick={() => handleClick("virtual")}
-                                className={`mt-3 px-4 py-2 bg-red-500 text-white p-2 rounded-3xl cursor-pointer transform transition-transform duration-150 ${clickedButtons["laptop"] ? "scale-90" : "scale-100"
+                                onClick={() => handleClick("playStation")}
+                                className={`mt-3 px-4 py-2 bg-red-500 text-white p-2 rounded-3xl cursor-pointer transform transition-transform duration-150 ${clickedButtons["playStation"] ? "scale-90" : "scale-100"
                                     }`}
                             >
                                 Browse
@@ -119,7 +119,7 @@ function Banner2() {
                             <button
                                 type="button"
                                 onClick={() => handleClick("virtual")}
-                                className={`mt-3 px-4 py-2 bg-white text-green-400 p-2 rounded-3xl cursor-pointer transform transition-transform duration-150 ${clickedButtons["earphone"] ? "scale-90" : "scale-100"
+                                className={`mt-3 px-4 py-2 bg-white text-green-400 p-2 rounded-3xl cursor-pointer transform transition-transform duration-150 ${clickedButtons["virtual"] ? "scale-90" : "scale-100"
                                     }`}
                             >
                                 Browse
@@ -138,7 +138,7 @@ function Banner2() {
                             <button
                                 type="button"
                                 onClick={() => handleClick("speaker")}
-                                className={`mt-3 px-4 py-2 bg-white text-blue-500 p-2 rounded-3xl cursor-pointer transform transition-transform duration-150 ${clickedButtons["gadget"] ? "scale-90" : "scale-100"
+                                className={`mt-3 px-4 py-2 bg-white text-blue-500 p-2 rounded-3xl cursor-pointer transform transition-transform duration-150 ${clickedButtons["speaker"] ? "scale-90" : "scale-100"
                                     }`}
                             >
                                 Browse
